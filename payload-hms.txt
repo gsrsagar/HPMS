@@ -1,0 +1,284 @@
+create table laboratory (lab_id varchar(450) ,lab_name varchar(4000));
+
+
+
+
+
+
+
+
+
+
+
+----------Login------------------
+{ 
+	"email":"sagarreddyguvvala@gmail.com",
+	"password":"sagar"
+}
+
+{{value | dateFormatPipe: userLocalizationCulture}}
+
+{
+      "testId": 1,
+      "testName": "LiverScan",
+      "cost": 4000,
+      "lab": {
+        "labId": 1,
+        "labName": "radiology",
+        "hibernateLazyInitializer": {}
+      }
+    },
+    {
+      "testId": 2,
+      "testName": "KidneyScan",
+      "cost": 5000,
+      "lab": {
+        "labId": 1,
+        "labName": "radiology",
+        "hibernateLazyInitializer": {}
+      }
+    },
+
+getSeriesMinMax()-si-chart.component.ts
+ let end = seriesData[seriesData.length-1][0]
+        if(!end && seriesData[seriesData.length-1].value[0].valueOf()) {
+          end = seriesData[seriesData.length-1].value[0].valueOf();
+        }
+
+{
+  "patientId": 1,
+  "tests": [
+    {
+      "cost": 0,
+      "lab": {
+        "labId": 1,
+        "labName": "radiology"
+      },
+      "testId": 1,
+      "testName": "LiverScan"
+    },
+{
+      "cost": 0,
+      "lab": {
+        "labId": 1,
+        "labName": "radiology"
+      },
+      "testId": 2,
+      "testName": "KidneyScan"
+    }
+  ]
+}
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  "address": {
+    "address": "Nellore",
+    "city": "Nellore",
+    "country": "INdia",
+    "id": 0,
+    "phoneNumber": "+91 9494744280",
+    "state": "AP",
+    "zipcode": 524002
+  },
+  "bills": [
+  ],
+  "disease": "Blood",
+  "doctor":{
+      "doctorId": 1,
+      "name": "Srinath",
+      "age": 24,
+      "gender": "Male",
+      "specilization": "Blood",
+      "costPerAppointment": 300,
+      "email": "doctor1@gmail.com",
+      "phoneNumber": "+91 9443456728"
+    },
+  "doctorPrescription": "string",
+  "email": "patient1@gmail.com",
+  "files": [
+  ],
+  "firstName": "Rajendraa",
+  "gender": "Male",
+  "lastName": "Reddy",
+  "mobileNumber": "+91 9345676480",
+  "patientId": 0,
+  "tests": [
+    {
+      "cost": 0,
+      "lab": {
+        "labId": "LAB0004",
+        "labName": "Radiology"
+      },
+      "testId": 2,
+      "testName": "scan"
+    }
+  ]
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ {    "patient_id":0,
+      "firstName": "Singham",
+      "lastName": "Chandra",
+      "mobileNumber": "+91 9494721345",
+      "email": "patient2@gmail.com",
+      "gender": "male",
+      "disease": "Brain",
+      "doctor": {
+        "doctorId": 1,
+        "name": "Hima SUresh",
+        "age": 24,
+        "gender": "male",
+        "specilization": "Kidney",
+        "costPerAppointment": 300,
+        "email": "doctor1@gmail.com",
+        "phoneNumber": "+919494734567"
+      },
+      "address": {
+        "address": "Baktavachal Nagar",
+        "city": "Nellore",
+        "state": "AP",
+        "country": "India",
+        "phoneNumber": "+91 9494734624",
+        "zipcode": 524002
+      },
+      "tests": [
+        {
+          "testId": 3,
+          "testName": "Bloodtest",
+          "cost": 3400,
+          "lab": {
+            "labId": 2,
+            "labName": "pathology"
+          }
+	}
+      ],
+      "files": []
+    }
+
+
+
+
+{
+  "address": {
+    "address": "string",
+    "city": "string",
+    "country": "string",
+    "id": 0,
+    "phoneNumber": "string",
+    "state": "string",
+    "zipcode": 0
+  },
+  "disease": "string",
+  "doctor": {
+    "age": 0,
+    "costPerAppointment": 0,
+    "doctorId": 0,
+    "email": "string",
+    "gender": "string",
+    "name": "string",
+    "phoneNumber": "string",
+    "specilization": "string"
+  },
+  "doctorPrescription": "string",
+  "email": "string",
+  "files": [
+    {
+      "data": [
+        "string"
+      ],
+      "id": "string",
+      "name": "string",
+      "type": "string"
+    }
+  ],
+  "firstName": "string",
+  "gender": "string",
+  "lastName": "string",
+  "mobileNumber": "string",
+  "patientId": 0,
+  "tests": [
+    {
+      "cost": 0,
+      "lab": {
+        "labId": 0,
+        "labName": "string"
+      },
+      "testId": 0,
+      "testName": "string"
+    }
+  ]
+}
+
+
+
+
+
+
+
+
+
+
+
+
+-----------------------------------------------
+UserType - usertype_id(pk) , usertypename
+
+User - userid(pk) , emailid(unique) , usertype_id(fk) , password
+
+doctor - doctor_id(pk) , name, age, gender
+
+Patient - patient_id (pk) , name , age, gender , diesease , doctor_id(fk) , doctor_prescription , attachments (blob)
+
+Tests - test_id(pk) , name, amount , lab_id(fk)
+
+laboratory - lab_id(pk) , lab_name
+
+
+
+github - Hendi Santika
+hendisantika
+
+
+
+@OneToMany(mappedBy="route", cascade=CascadeType.ALL,fetch=FetchType.LAZY )
+  @Column(nullable=false)
+  @JsonIgnore
+  private List<Ship> ships;
+
+@ManyToOne(fetch=FetchType.EAGER,optional=false)
+	@JoinColumn(name="route_id",nullable=false)
+	private Route route; 
+
+
+
+
+
+
+
+
